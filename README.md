@@ -4,6 +4,14 @@ This repo uses [Jekyll](http://jekyllrb.com/) to serve pages, which can be insta
 
 Once installed just run the command `jekyll serve` in your terminal in the root directory of this repo. In the output in your console from this command you will see `Server address: <base_url>`, visit this `base_url` in your browser and you will see the content on `fabricjs.com` with your local changes applied.
 
+#### Docker
+
+```
+npm install
+docker build -t fabric .
+docker run --rm --volume="$PWD:/srv/jekyll:Z" --publish 4000:4000 fabric jekyll serve
+```
+
 ### Not familiar with Fabric?
 
 Best place to start is by going through **[4-part tutorial](/articles)**
